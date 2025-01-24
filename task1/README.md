@@ -1,63 +1,132 @@
-# Docker and Docker Compose Installation Guide for Ubuntu
 
-# Step 1: Update and upgrade your system
+# Docker-linux Tasks
+# Task 1 - Docker Installation
+
+## Overview
+This task involved the following steps:
+1. Setting up Ubuntu (22.04 LTS)(Jammy Jellyfish) on VirtualBox.
+2. Installing Docker and Docker Compose on Linux.
+3. Configuring Docker to run without `sudo`.
+4. Verifying the Docker installation.
+5. Cloning a GitHub repository and documenting the process.
+
+---
+
+## Steps Performed
+
+### 1. Install Docker
+Commands used to install Docker:
+
 sudo apt update
 sudo apt upgrade -y
 
-# Step 2: Install required packages
 sudo apt install -y \
     ca-certificates \
     curl \
     gnupg \
     lsb-release
 
-# Step 3: Set up Docker's official GPG key
 sudo mkdir -p /etc/apt/keyrings
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
 
-# Step 4: Set up the Docker repository
 echo \
 "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
 $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
-# Step 5: Install Docker
 sudo apt update
+
 sudo apt install -y docker-ce docker-ce-cli containerd.io
 
-# Step 6: Verify Docker installation
-docker --version
+---
 
-# Step 7: Install Docker Compose
+### 2. Verify Docker Installation
+
+Command used to check the Docker version:
+
+
+docker --version
+Expected output (example):
+
+---
+
+Docker version 22.x.x
+ 
+###3. Install Docker Compose
+
+Commands used to install Docker Compose:
+
+
 sudo curl -L "https://github.com/docker/compose/releases/download/$(curl -s https://api.github.com/repos/docker/compose/releases/latest | grep -oP '"tag_name": "\K(.*)(?=")')/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 
-# Step 8: Make Docker Compose executable
 sudo chmod +x /usr/local/bin/docker-compose
 
-# Step 9: Verify Docker Compose installation
+Verify the Docker Compose installation:
+
 docker-compose --version
 
-# Step 10: Add your user to the Docker group
+Expected output (example):
+
+docker-compose version 2.x.x
+
+---
+
+###4. Configure Docker to Run Without sudo
+Command used to add the current user to the docker group:
+
 sudo usermod -aG docker $USER
 
-# Step 11: Test Docker installation
+Note: A reboot or re-login is required for this change to take effect.
+
+---
+
+###5. Test Docker
+Command used to verify Docker functionality:
+
 docker run hello-world
+Expected output:
 
-# Additional steps for task documentation
+Hello from Docker!
 
-# Clone the repository (replace <your-username> with your actual GitHub username)
-git clone https://github.com/<your-username>/docker-linux-tasks.git
+This message shows that your installation appears to be working correctly.
+---
 
-# Navigate to the task directory
+###6. GitHub Repository Setup
+Clone Repository
+Commands used to clone the GitHub repository:
+
+git clone https://github.com/sai-krishnaa1/docker-linux-tasks.git
+
 cd docker-linux-tasks
+
+Create task1 Directory:
+Commands used to set up the task1 directory:
+
+
+mkdir task1
 cd task1
 
-# Create a README file
 echo "# Task 1 - Docker Installation" > README.md
+Commit and Push Changes
+Commands used to commit and push changes to GitHub:
 
-# Commit and push changes
+
 git add .
 git commit -m "Add Task 1"
 git push origin main
 
-echo "Docker and Docker Compose installation complete!"
-echo "Please log out and log back in for group changes to take effect."
+Notes:
+
+->Docker and Docker Compose were successfully installed and verified.
+->The hello-world container ran successfully, confirming the installation.
+->The GitHub repository was updated with a task1 folder containing this README.md.
+
+---
+
+Conclusion:
+
+-> The task was completed successfully, with Docker and Docker Compose installed and configured. The steps were documented, and the repository was updated for future tasks.
+
+
+
+
