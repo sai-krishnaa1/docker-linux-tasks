@@ -1,6 +1,6 @@
 
 # Docker-linux Tasks
-# Task 1 - Docker and Docker Compose Installation 
+# Task 1 - Linux and Virtualbox installation
 
 ## Overview
 This task involved the following steps:
