@@ -143,7 +143,7 @@ Expected output (example):
 
 Docker version 24.x.x
 ```
-###3. Install Docker Compose
+### 3. Install Docker Compose
 
 Commands used to install Docker Compose:
 ```bash
