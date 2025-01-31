@@ -1,0 +1,17 @@
+# Ignore the shared data directory
+/shared/
+
+# Ignore Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+
+Ignore model and output files
+*.pkl
+*.h5
+
+Ignore any other log or temporary files
+*.log
+*.bak
+*.swp
