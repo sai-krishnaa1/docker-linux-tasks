@@ -1,0 +1,15 @@
+artifact_uri: file:///home/saiepam/docker-linux-tasks/task3/mlruns/494626205104203839/0fe6ee396cfb42069fd560e29af5c099/artifacts
+end_time: 1738930683484
+entry_point_name: ''
+experiment_id: '494626205104203839'
+lifecycle_stage: active
+run_id: 0fe6ee396cfb42069fd560e29af5c099
+run_name: fearless-trout-577
+run_uuid: 0fe6ee396cfb42069fd560e29af5c099
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738930674444
+status: 3
+tags: []
+user_id: saiepam

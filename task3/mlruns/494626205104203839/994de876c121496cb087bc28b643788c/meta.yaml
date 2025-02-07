@@ -1,0 +1,15 @@
+artifact_uri: file:///home/saiepam/docker-linux-tasks/task3/mlruns/494626205104203839/994de876c121496cb087bc28b643788c/artifacts
+end_time: 1738930699913
+entry_point_name: ''
+experiment_id: '494626205104203839'
+lifecycle_stage: active
+run_id: 994de876c121496cb087bc28b643788c
+run_name: melodic-boar-902
+run_uuid: 994de876c121496cb087bc28b643788c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738930695440
+status: 3
+tags: []
+user_id: saiepam

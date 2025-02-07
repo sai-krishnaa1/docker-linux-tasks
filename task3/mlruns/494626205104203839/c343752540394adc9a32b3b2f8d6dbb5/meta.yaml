@@ -1,0 +1,15 @@
+artifact_uri: file:///home/saiepam/docker-linux-tasks/task3/mlruns/494626205104203839/c343752540394adc9a32b3b2f8d6dbb5/artifacts
+end_time: 1738930687562
+entry_point_name: ''
+experiment_id: '494626205104203839'
+lifecycle_stage: active
+run_id: c343752540394adc9a32b3b2f8d6dbb5
+run_name: bald-hawk-850
+run_uuid: c343752540394adc9a32b3b2f8d6dbb5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738930683488
+status: 3
+tags: []
+user_id: saiepam

@@ -1,0 +1,15 @@
+artifact_uri: file:///home/saiepam/docker-linux-tasks/task3/mlruns/494626205104203839/b1e32d91a59b45218f604a7938087acc/artifacts
+end_time: 1738930691218
+entry_point_name: ''
+experiment_id: '494626205104203839'
+lifecycle_stage: active
+run_id: b1e32d91a59b45218f604a7938087acc
+run_name: amusing-ox-584
+run_uuid: b1e32d91a59b45218f604a7938087acc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1738930687573
+status: 3
+tags: []
+user_id: saiepam
