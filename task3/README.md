@@ -114,16 +114,17 @@ In Task 3, we focus on performing machine learning model experimentation, hyperp
 - **Model Training**: The second service is used to run the model training and experiment tracking. It communicates with the MLFlow server to log experiments and models.
 
 
-![Uploading task3.1.png…]()
-![Uploading task3.2.png…]()
-![Uploading task3,3.png…]()
-![Uploading task3.4.png…]()
-![Uploading task 3.5.png…]()
 
 
+![task3 1](https://github.com/user-attachments/assets/f1173f24-20ad-4585-8d44-47ef9a83ed3f)
 
+![task3 2](https://github.com/user-attachments/assets/343b02d4-4afb-4dcf-96d2-d25b5fe3f23d)
 
+![task3,3](https://github.com/user-attachments/assets/19bae24f-9ad8-48b4-a948-7cda0eb81cdb)
 
+![task3 4](https://github.com/user-attachments/assets/c9edd3ed-876b-41b7-80ad-76200663200b)
+
+![task 3 5](https://github.com/user-attachments/assets/6a51852c-fc33-4500-ad5d-ee3a409e5f13)
 
 
 ### Example Docker Compose Configuration
