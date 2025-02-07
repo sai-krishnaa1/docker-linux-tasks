@@ -113,6 +113,19 @@ In Task 3, we focus on performing machine learning model experimentation, hyperp
 - **MLFlow Server**: The `mlflow` service in `docker-compose.yml` starts an MLFlow server on port 5000, which you can access to visualize experiments and results.
 - **Model Training**: The second service is used to run the model training and experiment tracking. It communicates with the MLFlow server to log experiments and models.
 
+
+![Uploading task3.1.png…]()
+![Uploading task3.2.png…]()
+![Uploading task3,3.png…]()
+![Uploading task3.4.png…]()
+![Uploading task 3.5.png…]()
+
+
+
+
+
+
+
 ### Example Docker Compose Configuration
 
 ```yaml
