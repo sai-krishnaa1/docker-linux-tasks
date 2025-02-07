@@ -1,0 +1,6 @@
+artifact_location: file:///home/saiepam/docker-linux-tasks/task3/mlruns/494626205104203839
+creation_time: 1738930630352
+experiment_id: '494626205104203839'
+last_update_time: 1738930630352
+lifecycle_stage: active
+name: breast_cancer_experiment
