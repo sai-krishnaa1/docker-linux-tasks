@@ -21,7 +21,6 @@ task4/
 │   ├── transformed_train.csv    # Transformed training data
 │   ├── transformed_test.csv     # Transformed test data
 ├── docker-compose.yaml          # Docker Compose configuration
-├── docker-compose.override.yml  # Docker Compose override (ignored by Git)
 ├── requirements.txt             # Python dependencies
 ├── scripts/                      # Preprocessing scripts
 │   ├── clean_data.py            # Script for cleaning data
