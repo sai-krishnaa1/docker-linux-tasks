@@ -95,7 +95,6 @@ These preprocessing scripts are placed in the `scripts/` folder:
 The project uses Docker to containerize the Airflow and PostgreSQL services.
 
 - The `docker-compose.yaml` file sets up the services for Airflow, PostgreSQL, and Redis.
-- The `docker-compose.override.yml` file provides overrides specific to your local setup (it is ignored by Git).
 
 ### Additional Setup
 
@@ -124,9 +123,6 @@ This will stop and remove the containers, but the data and logs will persist.
 
 Feel free to fork and contribute to this project. Ensure that any modifications follow the code style and best practices outlined in this repository.
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
