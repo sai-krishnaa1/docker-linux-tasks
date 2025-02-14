@@ -9,10 +9,10 @@ from datetime import datetime, timedelta
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), 'scripts'))
  
 # Import preprocessing scripts
-from scripts.merge_data import merge_data
-from scripts.clean_data import clean_data
-from scripts.split_data import split_data
-from scripts.transform_data import transform_data
+from merge_data import merge_data
+from clean_data import clean_data
+from split_data import split_data
+from transform_data import transform_data
  
 # Setup logging
 logging.basicConfig(level=logging.INFO)

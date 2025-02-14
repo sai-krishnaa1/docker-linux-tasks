@@ -11,6 +11,50 @@ logs/
 # Ignore Docker Compose override file (if it is not meant for upload)
 docker-compose.override.yml
 
+# Ignore any environment variables file that is local (but keep .env for Git)
+.env
 
 # Ignore any other sensitive files or directories that should not be uploaded
 *.log
+
+# Ignore all files in the data folder except for train.csv and test.csv
+/data/*
+!/data/train.csv
+!/data/test.csv
+
+# Ignore logs folder as it's dynamically generated
+logs/
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment (if using one)
+venv/
+.env/
+
+# Ignore any local configuration files
+docker-compose.override.yml
+
+# Ignore all other unwanted files/folders (e.g., IDE settings)
+.idea/
+.vscode/
+
+# Ignore the Docker build cache
+.docker/
+
+# Ignore Jupyter Notebooks checkpoints
+.ipynb_checkpoints/
+
+# Ignore environment-specific files (if using other tools)
+*.env
+
+# Ensure that only the necessary files are included
+!dags/titanic_preprocessing.py
+!scripts/clean_data.py
+!scripts/merge_data.py
+!scripts/split_data.py
+!scripts/transform_data.py
+!requirements.txt
+!docker-compose.yaml
+!Dockerfile
