@@ -6,8 +6,6 @@ Here's the `README.md` file based on your request:
 This project demonstrates an Airflow-based pipeline for preprocessing the Titanic dataset. The pipeline consists of multiple tasks that include merging, cleaning, transforming, and splitting the dataset into train and test sets. The project uses Docker for containerization, with all dependencies specified in `requirements.txt`.
 
 ## Project Structure
-
-```plaintext
 task4/
 ├── dags/                        # Contains Airflow DAG files
 │   ├── titanic_preprocessing.py  # The main Airflow DAG
@@ -93,12 +91,11 @@ These preprocessing scripts are placed in the `scripts/` folder:
 
 - The project uses Docker to containerize the Airflow and PostgreSQL services.
 - The `docker-compose.yaml` file sets up the services for Airflow, PostgreSQL, and Redis.
-- The `docker-compose.override.yml` file provides overrides specific to your local setup (it is ignored by Git).
 
 ### Additional Setup
 
 - **requirements.txt**: All necessary Python dependencies are listed here. After the containers are built, the required packages will be installed automatically.
-- **Data**: You can download the Titanic dataset from [Kaggle Titanic Dataset](https://www.kaggle.com/c/titanic/data). Place the `train.csv` and `test.csv` files in the `data/` folder.
+- **Data**: The `train.csv` and `test.csv` are there  are inside the  `data/` folder.
 
 ## Cleanup
 
@@ -116,6 +113,9 @@ Feel free to fork and contribute to this project. Ensure that any modifications 
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 ```
+
+![Screenshot from 2025-02-14 20-04-21](https://github.com/user-attachments/assets/dc494815-b377-47c0-a3ab-564b47c4c182)
+![Screenshot from 2025-02-14 20-04-44](https://github.com/user-attachments/assets/64258ca3-6798-4ec2-b738-47f27c3df5be)
 
 
 
