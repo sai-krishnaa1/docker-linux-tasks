@@ -1,60 +1,33 @@
-# Ignore the virtual environment directory
-task4/
-
-# Ignore Python cache files
-*.pyc
-__pycache__/
-
-# Ignore Airflow logs and temporary files
-logs/
-
-# Ignore Docker Compose override file (if it is not meant for upload)
-docker-compose.override.yml
-
-# Ignore any environment variables file that is local (but keep .env for Git)
-.env
-
-# Ignore any other sensitive files or directories that should not be uploaded
-*.log
-
-# Ignore all files in the data folder except for train.csv and test.csv
-/data/*
-!/data/train.csv
-!/data/test.csv
-
-# Ignore logs folder as it's dynamically generated
-logs/
-
-# Ignore Python bytecode files
-__pycache__/
-*.pyc
-
-# Ignore virtual environment (if using one)
-venv/
-.env/
-
-# Ignore any local configuration files
-docker-compose.override.yml
-
-# Ignore all other unwanted files/folders (e.g., IDE settings)
-.idea/
-.vscode/
-
-# Ignore the Docker build cache
-.docker/
-
-# Ignore Jupyter Notebooks checkpoints
-.ipynb_checkpoints/
-
-# Ignore environment-specific files (if using other tools)
-*.env
-
-# Ensure that only the necessary files are included
-!dags/titanic_preprocessing.py
-!scripts/clean_data.py
-!scripts/merge_data.py
-!scripts/split_data.py
-!scripts/transform_data.py
-!requirements.txt
-!docker-compose.yaml
-!Dockerfile
+# Ignore compiled Python files  
+__pycache__/  
+*.pyc  
+*.pyo  
+ 
+# Ignore dags/__pycache__ and dags/scripts  
+dags/__pycache__/  
+dags/scripts/  
+ 
+# Ignore specific data files  
+data/cleaned.csv  
+data/final_test.csv  
+data/final_train.csv  
+data/merged.csv  
+data/transformed_test.csv  
+data/transformed_train.csv  
+ 
+# Ignore logs directory  
+logs/  
+ 
+# Ignore task4 directory  
+task4/  
+ 
+# Ignore environment files  
+.env  
+ 
+# Ignore virtual environments  
+venv/  
+env/  
+ 
+# Ignore system files  
+.DS_Store  
+Thumbs.db
