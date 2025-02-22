@@ -1,5 +1,6 @@
-mlruns/
-artifacts/
+src/mlruns/
+src/artifacts/
+src/model_releases/
 __pycache__/
 *.pyc
 *.pyo
