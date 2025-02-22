@@ -1,6 +1,11 @@
+Here’s the complete README file for the Task 3 project, following the project structure and the instructions you’ve provided:
+
+---
+
 # Task 3: Machine Learning Model Experimentation, Tracking, and Deployment
 
 ## Project Structure
+```
 docker-linux-tasks/      # Main project directory
 │
 ├── task1/               # Task 1 directory (not part of Task 3)
@@ -19,11 +24,11 @@ docker-linux-tasks/      # Main project directory
     │   ├── requirements.txt  # Python dependencies for the project
     │   └── train.py      # Python script to train, test, and log experiments with MLFlow
     └── README.md         # This file
-
+```
 
 ## Overview
 
-In Task 3, we focus on performing machine learning model experimentation, hyperparameter optimization, tracking the results using MLFlow, and creating a pseudo-release of the best model. This task involves creating multiple experiments with different models, hyperparameters, and features, followed by logging the results to MLFlow for comparison and analysis.
+In Task 3, we focus on performing machine learning model experimentation, hyperparameter optimization, tracking the results using MLFlow, and creating a pseudo-release of the best model. This task involves creating multiple experiments with different features, models, and hyperparameters, followed by logging the results to MLFlow for comparison and analysis.
 
 ### Main Goals:
 1. **Experimentation**: Run multiple experiments with different models, hyperparameters, and features.
@@ -38,92 +43,93 @@ In Task 3, we focus on performing machine learning model experimentation, hyperp
 - **src/Dockerfile**: Defines how the model container image is built. It uses a two-stage build process to install dependencies and copy necessary files.
 - **src/requirements.txt**: Lists the Python dependencies required for this task, including MLFlow and scikit-learn.
 - **src/train.py**: The main script for training, testing, and logging machine learning models using MLFlow. It also handles the hyperparameter search and logging of the best models.
-- **artifacts**: Contains the best-trained model files saved as .pkl files for Logistic Regression, SVM, and Random Forest.
+- **artifacts**: Contains the best-trained model files saved as `.pkl` files for Logistic Regression, SVM, and Random Forest.
 - **mlflow_runs** and **mlruns**: Directories for storing MLFlow tracking data, experiments, and model artifacts.
 
 ## Steps to Run the Project
 
 1. **Clone the Repository**:
    Clone the repository to your local machine:
-   
-bash
+   ```bash
    git clone https://github.com/yourusername/docker-linux-tasks.git
    cd docker-linux-tasks
-
+   ```
 
 2. **Navigate to Task 3**:
-   
-bash
+   ```bash
    cd task3
+   ```
 
-
-3. **Navigate to the src Directory**:
-   
-bash
+3. **Navigate to the `src` Directory**:
+   ```bash
    cd src
-
+   ```
 
 4. **Build the Docker Image**:
-   Build the Docker image using the Dockerfile:
-   
-bash
+   Build the Docker image using the `Dockerfile`:
+   ```bash
    docker build -t your-image-name .
-
+   ```
 
 5. **Run the Docker Containers**:
    First, make sure Docker Compose is set up and ready. Run the following command to start the MLFlow server and model container:
-   
-bash
+   ```bash
    docker-compose up --build
-
+   ```
 
    This will start the MLFlow server on port 5000 and also run the model container which trains the models, performs hyperparameter search, and logs everything to MLFlow.
 
 6. **Access MLFlow UI**:
    After the containers are up and running, you can view the experiment tracking and results at:
-   
-http://localhost:5000
+   ```
+   http://localhost:5000
+   ```
 
-
-7. **Verify Experiment Results in MLFlow UI**:
-   To verify the results of the experiment, use the following run ID in the MLFlow UI:
-   
-run ID: 994de876c121496cb087bc28b643788c
-
-   This will show the logged parameters, metrics, and artifacts for the completed experiment.
-
-8. **Running Experiments**:
-   The training script (train.py) will run experiments with multiple models, including:
+7. **Running Experiments**:
+   The training script (`train.py`) will run experiments with multiple models, including:
    - **Logistic Regression**
    - **SVM (Support Vector Machine)**
    - **Random Forest**
 
-   The script performs grid and random search hyperparameter tuning for each model, logs the results (accuracy, parameters, and artifacts) in MLFlow, and saves the best models as artifacts in the artifacts folder.
+   The script performs grid and random search hyperparameter tuning for each model, logs the results (accuracy, parameters, and artifacts) in MLFlow, and saves the best models as artifacts in the `artifacts` folder.
 
-9. **Making a Pseudo-Release**:
+8. **Making a Pseudo-Release**:
    Once the best model is selected, make a clean release of the model code:
-   
-bash
+   ```bash
    git checkout -b release-v1.0
    git add .
    git commit -m "Finalized model code for release"
    git tag -a v1.0 -m "Release v1.0 - Best Model"
    git push origin release-v1.0
-
+   ```
 
    This will tag the commit as version 1.0 and push the release branch to GitHub.
 
-10. **Storing the Best Model Artifacts**:
-    The best models are saved in the artifacts/ directory as .pkl files. You can also track the model artifacts in the MLFlow server.
+9. **Storing the Best Model Artifacts**:
+   The best models are saved in the `artifacts/` directory as `.pkl` files. You can also track the model artifacts in the MLFlow server.
 
 ## Docker Setup and Services
 
-- **MLFlow Server**: The mlflow service in docker-compose.yml starts an MLFlow server on port 5000, which you can access to visualize experiments and results.
+- **MLFlow Server**: The `mlflow` service in `docker-compose.yml` starts an MLFlow server on port 5000, which you can access to visualize experiments and results.
 - **Model Training**: The second service is used to run the model training and experiment tracking. It communicates with the MLFlow server to log experiments and models.
+
+
+
+
+![task3 1](https://github.com/user-attachments/assets/f1173f24-20ad-4585-8d44-47ef9a83ed3f)
+
+![task3 2](https://github.com/user-attachments/assets/343b02d4-4afb-4dcf-96d2-d25b5fe3f23d)
+
+![task3,3](https://github.com/user-attachments/assets/19bae24f-9ad8-48b4-a948-7cda0eb81cdb)
+
+![task3 4](https://github.com/user-attachments/assets/c9edd3ed-876b-41b7-80ad-76200663200b)
+
+![task 3 5](https://github.com/user-attachments/assets/6a51852c-fc33-4500-ad5d-ee3a409e5f13)
+
 
 ### Example Docker Compose Configuration
 
-yaml
+```yaml
 version: '3.8'
 
 services:
@@ -136,7 +142,7 @@ services:
       - ./mlflow_runs:/mlruns
     command: >
       mlflow server --backend-store-uri sqlite:///mlflow.db --default-artifact-root /mlruns --host 0.0.0.0 --port 5000
-
+```
 
 This configuration allows you to run the MLFlow server, where you can visualize the experiment tracking UI and manage the models.
 
@@ -145,15 +151,17 @@ This configuration allows you to run the MLFlow server, where you can visualize 
 To run this project, you need to have the following software installed:
 - **Docker** and **Docker Compose**: For containerizing and running the MLFlow server and model training.
 - **Python 3.9+**: For dependencies and model training.
-- **MLFlow**, **scikit-learn**, **joblib**, **pandas**, **numpy**: These dependencies are specified in the requirements.txt file.
+- **MLFlow**, **scikit-learn**, **joblib**, **pandas**, **numpy**: These dependencies are specified in the `requirements.txt` file.
 
 Install the Python dependencies by running:
-bash
+```bash
 pip install -r requirements.txt
-
+```
 
 ## Conclusion
 
 This project involves conducting machine learning experiments, logging results using MLFlow, and deploying the best model through Docker containers. By following the steps in the README, you will be able to track experiments, perform hyperparameter tuning, and make a clean release of the best model for further use.
 
 ---
+
+This README provides a comprehensive overview of Task 3 and guides the user through the steps of running the experiment, tracking results, and managing the best model. Let me know if you need any modifications!
