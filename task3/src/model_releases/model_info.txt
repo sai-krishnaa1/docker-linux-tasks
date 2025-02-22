@@ -1,5 +1,0 @@
-Best Model Information:
-Run ID: f50e42aa83144e2aa7f75b1220f992d6
-Model Type: LogisticRegression
-Accuracy: 0.9912
-Parameters: {'model': 'LogisticRegression', 'search_type': 'random', 'solver': 'liblinear', 'C': '0.1'}
