@@ -1,0 +1,16 @@
+# Ignore the virtual environment directory
+task4/
+
+# Ignore Python cache files
+*.pyc
+__pycache__/
+
+# Ignore Airflow logs and temporary files
+logs/
+
+# Ignore Docker Compose override file (if it is not meant for upload)
+docker-compose.override.yml
+
+
+# Ignore any other sensitive files or directories that should not be uploaded
+*.log

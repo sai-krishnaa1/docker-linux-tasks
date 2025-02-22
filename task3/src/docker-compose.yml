@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v2.9.2
+    container_name: mlflow_server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./mlruns:/mlruns  # Relative to src directory
+      - ./artifacts:/artifacts
+    command: >
+      mlflow server 
+      --backend-store-uri sqlite:///mlflow.db 
+      --default-artifact-root file:///artifacts 
+      --host 0.0.0.0 
+      --port 5000
+
+  training:
+    build: .
+    container_name: ml_training
+    depends_on:
+      - mlflow
+    environment:
+      - MLFLOW_TRACKING_URI=http://mlflow:5000
+      - MLFLOW_ARTIFACT_ROOT=/artifacts
+    volumes:
+      - ./artifacts:/artifacts
+      - ./mlruns:/mlruns
