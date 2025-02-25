@@ -3,10 +3,10 @@ from setuptools import setup, find_packages
 setup(
     name="model_deployment",
     version="0.1",
-    author="Your Name",
-    author_email="your.email@example.com",
+    author="Saikrishnaa",
+    author_email="sai_krishnaa@epam.com",
     description="A project for model deployment in two modes: online (REST API) and batch (scheduled pipeline)",
-    url="https://github.com/yourusername/model_deployment",
+    url="https://github.com/sai-krishnaa1/docker-linux-tasks/task5",
     packages=find_packages(where="src"),
     package_dir={"": "src"},
     install_requires=[
